@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Dots/green.svg" type="Texture" id=1]
+[ext_resource path="res://Scenes/Dot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/img/nikita.png" type="Texture" id=3]
+
+[node name="green_dot" instance=ExtResource( 2 )]
+color = "green"
+
+[node name="Sprite2" type="Sprite" parent="." index="0"]
+modulate = Color( 0.513726, 0.909804, 0.180392, 1 )
+position = Vector2( 4, -11 )
+scale = Vector2( 0.352941, 0.264973 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="1"]
+visible = false
+texture = ExtResource( 1 )

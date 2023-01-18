@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/fonts/antonf.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/img/lexa.png" type="Texture" id=2]
+[ext_resource path="res://Assets/img/nikita.png" type="Texture" id=3]
+[ext_resource path="res://Assets/img/vlad.png" type="Texture" id=4]
+[ext_resource path="res://Assets/img/timur.png" type="Texture" id=5]
+[ext_resource path="res://Assets/img/slava.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/menu_scene/menu.gd" type="Script" id=7]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 1 )
+
+[node name="menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0.580392, 0.580392, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 35
+custom_constants/margin_top = 35
+custom_constants/margin_left = 35
+custom_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 35.0
+margin_top = 35.0
+margin_right = 505.0
+margin_bottom = 925.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 190.0
+margin_right = 470.0
+margin_bottom = 239.0
+custom_fonts/font = ExtResource( 1 )
+text = "Slovyan's team"
+align = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 254.0
+margin_right = 470.0
+margin_bottom = 354.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 90.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 94.0
+margin_right = 185.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 189.0
+margin_right = 280.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 284.0
+margin_right = 375.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 379.0
+margin_right = 470.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 369.0
+margin_right = 470.0
+margin_bottom = 418.0
+custom_fonts/font = ExtResource( 1 )
+text = "  height:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 433.0
+margin_right = 470.0
+margin_bottom = 492.0
+alignment = 1
+
+[node name="SpinBoxW" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+modulate = Color( 1, 0.447059, 0.447059, 1 )
+margin_right = 470.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+theme = SubResource( 1 )
+min_value = 1.0
+value = 7.0
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 507.0
+margin_right = 470.0
+margin_bottom = 556.0
+custom_fonts/font = ExtResource( 1 )
+text = "  wight:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 571.0
+margin_right = 470.0
+margin_bottom = 630.0
+alignment = 1
+
+[node name="SpinBoxH" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+modulate = Color( 0.560784, 1, 0.556863, 1 )
+margin_right = 470.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+theme = SubResource( 2 )
+min_value = 1.0
+value = 7.0
+align = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+pause_mode = 1
+modulate = Color( 0.701961, 1, 0.529412, 1 )
+margin_left = 160.0
+margin_top = 645.0
+margin_right = 310.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 150, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Play"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
