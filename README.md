@@ -1,6 +1,6 @@
 # GodotProjects
 
-<h1><a href="" target="_blank">falling Guy</a>
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/fallingGuy" target="_blank">falling Guy</a>
   <h3 align="center"></h3>
 
 <img src="https://user-images.githubusercontent.com/55885322/213185712-2e575e4c-1dc2-4503-8384-fe32615f1434.png" height="300"/></h1>
@@ -9,7 +9,15 @@
 <img src="https://user-images.githubusercontent.com/55885322/213185982-8f71933e-41e8-40d0-94c8-13f300179f0a.png" height="300"/></h1>
 
 
-<h1><a href="" target="_blank">topdown shooter</a>
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/match3-SlovyansTeam" target="_blank">Slovyan's team</a>
+  <h3 align="center"></h3>
+  <a href="https://dievil.ru/game/index" target="_blank">play in browser</a>
+<img src="https://user-images.githubusercontent.com/55885322/213190198-78b7b336-6f18-42bd-af04-5f00bf3a7e22.png" height="300"/></h1>
+<img src="https://user-images.githubusercontent.com/55885322/213190395-cbd5d265-8419-4b71-bfaf-203c7844563a.png" height="300"/></h1>
+
+
+
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/topdown%20shooter" target="_blank">topdown shooter</a>
   <h3 align="center"></h3>
 
 <img src="https://user-images.githubusercontent.com/55885322/213186838-c596174a-7886-40b0-82d6-8eaeead7cccc.png" height="300"/></h1>
@@ -27,7 +35,7 @@
 
 
 
-<h1><a href="" target="_blank">carantine</a>
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/carantine" target="_blank">carantine</a>
   <h3 align="center"></h3>
 
 <img src="https://user-images.githubusercontent.com/55885322/213185357-5f9034bb-ee0e-4895-bcbb-f26a96821d06.png" height="300"/></h1>
@@ -38,7 +46,7 @@
 
 
 
-<h1><a href="" target="_blank">AI test</a>
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/ia_test" target="_blank">AI test</a>
   <h3 align="center"></h3>
 
 <img src="https://user-images.githubusercontent.com/55885322/213186159-78c0bdc7-f9f8-4f3e-8dc2-2cf58e12f5a9.png" height="300"/></h1>
@@ -46,7 +54,7 @@
 <img src="https://user-images.githubusercontent.com/55885322/213186371-19a84b0e-51d1-4f31-8c37-686c0ed0dccd.png" height="300"/></h1>
 
 
-<h1><a href="" target="_blank">probka</a>
+<h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/probka" target="_blank">probka</a>
   <h3 align="center"></h3>
 
 <img src="https://user-images.githubusercontent.com/55885322/213186611-a341d99c-38fd-45da-92cf-fd1726e7ea68.png" height="300"/></h1>
