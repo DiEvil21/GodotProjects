@@ -12,8 +12,9 @@
 <h1><a href="https://github.com/DiEvil21/GodotProjects/tree/main/match3-SlovyansTeam" target="_blank">Slovyan's team</a>
   <h3 align="center"></h3>
   <a href="https://dievil.ru/game/index" target="_blank">play in browser</a>
-<img src="https://user-images.githubusercontent.com/55885322/213190198-78b7b336-6f18-42bd-af04-5f00bf3a7e22.png" height="300"/></h1>
-<img src="https://user-images.githubusercontent.com/55885322/213190395-cbd5d265-8419-4b71-bfaf-203c7844563a.png" height="300"/></h1>
+
+  <img src="https://user-images.githubusercontent.com/55885322/213190198-78b7b336-6f18-42bd-af04-5f00bf3a7e22.png" height="300"/></h1>
+  <img src="https://user-images.githubusercontent.com/55885322/213190395-cbd5d265-8419-4b71-bfaf-203c7844563a.png" height="300"/></h1>
 
 
 
