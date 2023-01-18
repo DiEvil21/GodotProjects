@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/player_scene/Falling.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/main_scene/player.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 2.50351
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.710682, -0.0360165, 0.312031 )
+script = ExtResource( 2 )
+
+[node name="Falling" parent="." instance=ExtResource( 1 )]
+transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.382958, 0.923766, 0, -0.923766, 0.382958, 0.0454998, 16.1209, 7.2564 )
+current = true
+fov = 120.4
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24114, 0 )
+shape = SubResource( 1 )

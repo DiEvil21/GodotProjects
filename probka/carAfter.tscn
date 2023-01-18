@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://import/cars/Car5.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://import/textures/Cars_Texture.png" type="Texture" id=2]
+[ext_resource path="res://carAfter.gd" type="Script" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="carAfter" type="KinematicBody"]
+script = ExtResource( 3 )
+
+[node name="Car5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.51228, -7.62939e-05, 15.9479 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )

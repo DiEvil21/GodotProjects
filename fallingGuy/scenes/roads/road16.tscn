@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://import/road16/road16.glb" type="PackedScene" id=1]
+
+[node name="road16" instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )

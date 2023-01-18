@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/phone/exit.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/hud/counters.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/phone/phone.gd" type="Script" id=4]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/phoneLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "text"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/phoneLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="phone" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 209.0
+margin_top = -50.0
+margin_right = -209.0
+margin_bottom = 46.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 606.0
+margin_bottom = 106.0
+
+[node name="phoneLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 606.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 5 )
+text = "321312312"
+align = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 606.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Попросить в долг 500 денег"
+
+[node name="spor" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 606.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 3 )
+text = "Поспорить на 500 денег"
+
+[node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 81.0
+margin_right = 606.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 4 )
+text = "Выход"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 6 )
+anims/text = SubResource( 7 )
+
+[node name="counters" parent="." instance=ExtResource( 3 )]
+
+[node name="hud" parent="." instance=ExtResource( 5 )]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/spor" to="." method="_on_spor_button_down"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/spor" to="." method="_on_spor_button_up"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/spor" to="." method="_on_spor_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="MarginContainer/VBoxContainer/exit" method="_on_exit_pressed"]

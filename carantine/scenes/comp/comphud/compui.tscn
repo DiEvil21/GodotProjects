@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/comp/comphud/compui.gd" type="Script" id=2]
+[ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/comp/comphud/CompExit.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "comptext"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="compui" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = -23.0
+margin_right = 184.0
+margin_bottom = 23.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 368.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 368.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 6 )
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 368.0
+margin_bottom = 48.0
+alignment = 1
+
+[node name="TextureButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 9.0
+margin_right = 94.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 2 )
+text = "Рулетка"
+
+[node name="TextureButton2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 98.0
+margin_right = 186.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 3 )
+text = "Учиться"
+
+[node name="TextureButton3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 190.0
+margin_right = 359.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 3 )
+text = "Затащить катку"
+
+[node name="exit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -146.0
+margin_top = 15.0
+margin_right = -78.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "Выход"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/comptext = SubResource( 5 )
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="exit" to="exit" method="_on_Button_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://import/player/Sitting Talking(1).fbx" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player_scene/Sitting Talking.gd" type="Script" id=2]
+
+[node name="Sitting Talking(1)" instance=ExtResource( 1 )]
+script = ExtResource( 2 )

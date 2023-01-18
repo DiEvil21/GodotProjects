@@ -1,0 +1,33 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/roads/road8.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/roads/road4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/roads/road6.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/roads/road11.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/roads/road9.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/roads/road10.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/roads/road3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/roads/road7.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/roads/road13.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/roads/road12.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/roads/road14.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/roads/road15.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/roads/road16.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/roads/road5.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/roads/road2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/roads/road1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/road_scene/roads.gd" type="Script" id=17]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 10.5432, 23.6776, 0.777329 )
+
+[node name="roads" type="StaticBody"]
+script = ExtResource( 17 )
+scenes = [ ExtResource( 16 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="road16" parent="." instance=ExtResource( 13 )]
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.8234, -19.248 )
+shape = SubResource( 1 )
