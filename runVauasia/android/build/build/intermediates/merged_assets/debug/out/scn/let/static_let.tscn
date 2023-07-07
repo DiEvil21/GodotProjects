@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://materials/shader_mat.tres" type="Material" id=1]
+[ext_resource path="res://scn/stump/Stump.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 0.824653, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 19.4652, 5.8746, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.854534, 0.748549, 0.813574 )
+
+[node name="static_let" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+visible = false
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 1 )
+
+[node name="let_area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="let_area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6989 )
+shape = SubResource( 3 )
+
+[node name="game_over_area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="game_over_area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.333856 )
+shape = SubResource( 4 )
+
+[node name="Stump2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337674, 4.61159 )

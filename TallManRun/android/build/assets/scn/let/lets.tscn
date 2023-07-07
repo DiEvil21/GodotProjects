@@ -1,0 +1,12 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scn/let/let2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn/let/let1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn/let/lets.gd" type="Script" id=3]
+[ext_resource path="res://scn/let/let4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scn/let/let5.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scn/let/let3.tscn" type="PackedScene" id=6]
+
+[node name="lets" type="Spatial"]
+script = ExtResource( 3 )
+lets = [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ) ]

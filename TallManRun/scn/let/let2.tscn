@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://import/texture/texture_post.jpg" type="Texture" id=1]
+[ext_resource path="res://materials/fonts/font.tres" type="DynamicFont" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.0
+radial_segments = 6
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.096, 2.344, 1.036 )
+
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 0.156863, 0.92549, 0.945098, 0, 0.160784, 0.741176, 0.8, 0.623529 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 6 )
+width = 100
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.5, 0.5, 0.023 )
+
+[node name="let2" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.502, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.71065e-05, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance/MeshInstance2"]
+transform = Transform( -4.45454e-08, 101.908, 0, -1, -4.37114e-06, 0, 0, 0, 1, -0.482887, -0.0134797, 0 )
+texture = SubResource( 4 )
+
+[node name="Label3D" type="Label3D" parent="MeshInstance/MeshInstance2/Sprite3D"]
+transform = Transform( -4.2893e-08, -1, 0, 0.00981278, -4.37114e-10, 0, 0, 0, 1, -0.0639305, -4.7625e-05, 0 )
+outline_modulate = Color( 1, 0.913725, 0.913725, 1 )
+text = "+25"
+font = ExtResource( 2 )
+uppercase = true
+
+[node name="let_area_+25" type="Area" parent="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.502, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/let_area_+25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.507525, 0.496493, 0 )
+shape = SubResource( 5 )
